@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+	<h1>0000年00月00日 00:00:00</h1>
+<script type="text/javascript">
+	var h1 = document.querySelector('h1');
+	setInterval(time,1000);
+	time();
+function time(){
+	
+	var date = new Date();
+	var year = date.getFullYear();
+	console.log(year);
+	var month = ad(date.getMonth()+1);
+	console.log(month);
+	var day = ad(date.getDate());
+	console.log(day);
+	var hour = ad(date.getHours());
+	console.log(hour);
+	var minutes = ad(date.getMinutes());
+	console.log(minutes);
+	var seconds = ad(date.getSeconds());
+	console.log(seconds);
+	var time = date.getTime();
+	console.log(time);
+	var time2 = Date.now();
+	console.log(time2);
+	
+	h1.innerHTML = year+'年'+ month +'月'+ day +'日'+ hour +':'+ minutes +':'+ seconds ; 
+}
+function ad(n){
+	return n < 10 ? '0'+n : ''+n;
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>
